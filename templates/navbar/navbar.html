@@ -1,0 +1,16 @@
+<div class="navbar bg-base-300 rounded-b-box justify-between px-10 flex-wrap lg:flex-nowrap">
+  <div class="flex w-full justify-between">
+    <a href="/" class="text-2xl font-bold justify-self-start">DishDiscovery</a>
+    <div class="lg:hidden">
+      {% include 'navbar/profile_dropdown.html' %}
+    </div>
+  </div>
+  <div class="flex gap-2 w-full lg:w-auto">
+    <div class="form-control w-full lg:w-auto">
+      <input type="text" placeholder="Search" class="input input-bordered w-full md:w-auto" />
+    </div>
+    <div class="hidden lg:block">
+    {% include 'navbar/profile_dropdown.html' %}
+    </div>
+  </div>
+</div>
