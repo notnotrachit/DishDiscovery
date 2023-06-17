@@ -5,7 +5,7 @@ from django.db import models
 class Recipe(models.Model):
     title = models.CharField(max_length=250)
     description = models.TextField()
-    ingredients = models.JSONField(default=list)
+    ingredients = models.TextField()
     steps = models.JSONField(default=list)
     image = models.ImageField(upload_to='images/recipes/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

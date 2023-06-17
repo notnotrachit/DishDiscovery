@@ -2,7 +2,11 @@
   <div class="flex w-full justify-between">
     <a href="/" class="text-2xl font-bold justify-self-start text-primary">DishDiscovery</a>
     <div class="lg:hidden">
+      {% if request.user.is_authenticated %}
       {% include 'navbar/profile_dropdown.html' %}
+      {% else %}
+        <a href="{% url 'account_login' %}" class="btn btn-primary btn-small">Login</a>
+      {% endif %}
     </div>
   </div>
   <div class="flex gap-2 w-full lg:w-auto">
@@ -10,7 +14,11 @@
       <input type="text" placeholder="Search" class="input input-bordered w-full md:w-auto" />
     </div>
     <div class="hidden lg:block">
-    {% include 'navbar/profile_dropdown.html' %}
+      {% if request.user.is_authenticated %}
+      {% include 'navbar/profile_dropdown.html' %}
+      {% else %}
+        <a href="{% url 'account_login' %}" class="btn btn-ghost text-primary hover:bg-primary hover:text-base-200 btn-small">Login</a>
+      {% endif %}
     </div>
   </div>
 </div>

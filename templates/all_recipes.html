@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <div class="px-10">
+        <h1 class="text-4xl font-bold py-10">Recipes:</h1>
+        <div class="flex flex-wrap justify-center px-10">
+        {% for i in recipes %}
+            <div class="card w-96 bg-base-200 shadow-xl">
+            <figure class="px-5 pt-5">
+                <img src="{% get_media_prefix %}{{i.image}}" alt="{{i.title}} image" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">{{i.title}}</h2>
+                <p>{{ i.description | truncatechars:50}}</p>
+                <div class="card-actions">
+                <button class="btn btn-primary">Read</button>
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}
