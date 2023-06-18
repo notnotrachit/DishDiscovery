@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <div class="px-10">
+        <h1 class="text-4xl font-bold py-10">Recipes matching your search:</h1>
+        <div class="flex flex-wrap justify-center px-5 gap-8">
+        {% for i in recipes %}
+            <div class="card w-72 bg-base-200 shadow-xl">
+            <figure class="px-5 pt-5">
+                <img src="{{i.image.url}}" alt="{{i.title}} image" class="rounded-xl max-h-72 border-2 border-primary" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">{{i.title}}</h2>
+                <p>{{ i.description | truncatechars:50}}</p>
+                <div class="card-actions">
+                    <a href="{% url 'recipe_detail' i.id %}">
+                        <button class="btn btn-primary">Read</button>
+                    </a>
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

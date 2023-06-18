@@ -72,3 +72,14 @@ def edit_recipe(request, pk):
         }
         return render(request, 'edit_recipe.html', context)
 
+def search(request):
+    """Search for recipes by title or description or ingredients"""
+    query = request.GET.get('q')
+    recipes = Recipe.objects.filter(title__icontains=query) | Recipe.objects.filter(description__icontains=query) | Recipe.objects.filter(ingredients__icontains=query)
+    context = {
+        'recipes': recipes,
+        'query': query
+    }
+    if query == '':
+        return redirect('all_recipes')
+    return render(request, 'search.html', context)

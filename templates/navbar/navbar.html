@@ -11,7 +11,9 @@
   </div>
   <div class="flex gap-2 w-full lg:w-auto">
     <div class="form-control w-full lg:w-auto">
-      <input type="text" placeholder="Search" class="input input-bordered w-full md:w-auto" />
+      <form action="{% url 'search' %}" method="GET">
+        <input type="text" name="q" placeholder="Search" class="input input-bordered w-full md:w-auto" {% if query %}value="{{query}}"{% endif %}/>
+      </form>
     </div>
     <div class="hidden lg:block">
       {% if request.user.is_authenticated %}
