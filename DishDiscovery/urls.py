@@ -19,7 +19,7 @@ from django.urls import path, include
 from .views import index
 from django.conf import settings
 from django.conf.urls.static import static
-from core import views as recipe_views
+from recipe import views as recipe_views
 
 
 urlpatterns = [
@@ -27,6 +27,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('accounts/', include('allauth.urls')),
     path('recipes/', recipe_views.all_recipes, name='all_recipes'),
+    path('recipes/<int:pk>/', recipe_views.recipe_detail, name='recipe_detail'),
 ]
 
 if settings.DEBUG:
