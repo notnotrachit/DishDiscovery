@@ -7,7 +7,7 @@
         {% for i in recipes %}
             <div class="card w-96 bg-base-200 shadow-xl">
             <figure class="px-5 pt-5">
-                <img src="{% get_media_prefix %}{{i.image}}" alt="{{i.title}} image" class="rounded-xl" />
+                <img src="{{i.image.url}}" alt="{{i.title}} image" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{{i.title}}</h2>
