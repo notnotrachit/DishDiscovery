@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "DishDiscovery/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "DishDiscovery/wsgi.py"
+    }
+  ]
+}
