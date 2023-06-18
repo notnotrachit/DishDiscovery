@@ -57,7 +57,6 @@ def profile(request):
 
 def edit_recipe(request, pk):
     recipe = Recipe.objects.get(pk=pk)
-    original_image = recipe.image
     if request.method == 'POST':
         recipe.title = request.POST.get('title')
         recipe.description = request.POST.get('description')
@@ -65,8 +64,6 @@ def edit_recipe(request, pk):
         recipe.steps = request.POST.getlist('instructions')
         if request.FILES.get('image'):
             recipe.image = request.FILES.get('image')
-        else:
-            recipe.image = original_image
         recipe.save()
         return redirect('recipe_detail', pk=recipe.pk)
     else:
