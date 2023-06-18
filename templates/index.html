@@ -1,6 +1,34 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html data-theme="lemonade">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DishDiscovery</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-['Poppins']">
 
-{% block main %}
-    <h1>Home</h1>
-    <p> Welcome to the home page!</p>
-{% endblock %}
+
+<div class="hero min-h-screen" style="background-image: url(https://jodwyarssgkswjrsudwe.supabase.co/storage/v1/object/public/recipe/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface.webp?t=2023-06-18T21%3A44%3A45.958Z);">
+  <div class="hero-overlay bg-opacity-60"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md">
+      <h1 class="mb-5 text-7xl font-bold">DishDiscovery</h1>
+      <p class="mb-5 text-3xl">Feeling hungry? Need ideas for what to cook?</p>
+      <a href="{% url 'all_recipes' %}">
+      <button class="btn btn-primary">Discover Recipes</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
