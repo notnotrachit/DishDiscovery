@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <div class="text-4xl font-bold text-center my-5">New Recipe</div>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="flex justify-center my-5">
+      <div class="form md:flex gap-16">
+        <div id="form_main">
+          <label class="label" for="title"><span class="label-text text-xl">Recipe Name</span></label>
+          <input name="title" type="text" placeholder="For eg. Cheese Burger" class="input input-bordered input-primary w-full max-w-md" required />
+          <label class="label" for="image"><span class="label-text text-xl">Image</span></label>
+          <input type="file" name="image" class="file-input file-input-bordered file-input-primary w-full max-w-md" accept="image/*" required />
+          <label class="label" for="description"><span class="label-text text-xl">Description</span></label>
+          <textarea name="description" class="textarea h-12 textarea-bordered textarea-primary w-full max-w-md" placeholder="Enter recipe description here" required></textarea>
+          <label class="label" for="ingredients"><span class="label-text text-xl">Ingredients</span></label>
+          <textarea name="ingredients" class="textarea h-36 textarea-bordered textarea-primary w-full max-w-md" placeholder="For eg. \nRice,\nTomato,\nGarlic" required></textarea>
+        </div>
+        <div id="steps">
+          <label class="label" for="steps"><span class="label-text text-xl">Steps:</span></label>
+          <div id="step_inputs">
+            <div class="flex flex-col">
+              <label for="instructions" class="label">Step 1</label>
+              <input name="instructions" type="text" placeholder="Enter step 1" class="input input-bordered input-primary w-full max-w-md" required />
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div id="add_step" class="btn btn-primary btn-sm m-2">Add Step</div>
+            <div id="remove_step" class="btn btn-primary btn-sm m-2">Remove Step</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <button class="btn btn-primary btn-outline btn-block w-24" type="submit">Submit</button>
+    </div>
+  </form>
+  <script>
+    var textAreas = document.getElementsByTagName('textarea')
+    
+    Array.prototype.forEach.call(textAreas, function (elem) {
+      elem.placeholder = elem.placeholder.replace(/\\n/g, '\n')
+    })
+    
+    var step_count = 1
+    var add_step = document.getElementById('add_step')
+    add_step.addEventListener('click', function () {
+      step_count++
+      var step_inputs = document.getElementById('step_inputs')
+      var new_step = document.createElement('div')
+      new_step.classList.add('flex', 'flex-col')
+      var new_label = document.createElement('label')
+      new_label.classList.add('label')
+      new_label.innerHTML = 'Step ' + step_count
+      var new_input = document.createElement('input')
+      new_input.classList.add('input', 'input-bordered', 'input-primary', 'w-full', 'max-w-md')
+      new_input.setAttribute('name', 'instructions')
+      new_input.setAttribute('type', 'text')
+      new_input.setAttribute('placeholder', 'Enter step ' + step_count)
+      new_input.setAttribute('required', '')
+      new_step.appendChild(new_label)
+      new_step.appendChild(new_input)
+      step_inputs.appendChild(new_step)
+    })
+    
+    var remove_step = document.getElementById('remove_step')
+    remove_step.addEventListener('click', function () {
+      if (step_count > 1) {
+        var step_inputs = document.getElementById('step_inputs')
+        step_inputs.removeChild(step_inputs.lastChild)
+        step_count--
+      }
+    })
+  </script>
+{% endblock %}

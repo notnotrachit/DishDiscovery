@@ -28,6 +28,8 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('recipes/', recipe_views.all_recipes, name='all_recipes'),
     path('recipes/<int:pk>/', recipe_views.recipe_detail, name='recipe_detail'),
+    path('recipes/new/', recipe_views.new_recipe, name='new_recipe'),
+    path('recipes/<int:pk>/like/', recipe_views.toggle_like_recipe, name='toggle_like_recipe'),
 ]
 
 if settings.DEBUG:

@@ -3,17 +3,19 @@
 {% block main %}
     <div class="px-10">
         <h1 class="text-4xl font-bold py-10">Recipes:</h1>
-        <div class="flex flex-wrap justify-center px-10">
+        <div class="flex flex-wrap justify-center px-5 gap-8">
         {% for i in recipes %}
-            <div class="card w-96 bg-base-200 shadow-xl">
+            <div class="card w-72 bg-base-200 shadow-xl">
             <figure class="px-5 pt-5">
-                <img src="{{i.image.url}}" alt="{{i.title}} image" class="rounded-xl" />
+                <img src="{{i.image.url}}" alt="{{i.title}} image" class="rounded-xl max-h-72 border-2 border-primary" />
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{{i.title}}</h2>
                 <p>{{ i.description | truncatechars:50}}</p>
                 <div class="card-actions">
-                <button class="btn btn-primary">Read</button>
+                    <a href="{% url 'recipe_detail' i.id %}">
+                        <button class="btn btn-primary">Read</button>
+                    </a>
                 </div>
             </div>
             </div>
