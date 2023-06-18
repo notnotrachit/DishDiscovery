@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from recipe.models import Recipe
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def all_recipes(request):
@@ -18,7 +19,7 @@ def recipe_detail(request, pk):
     }
     return render(request, 'recipe_detail.html', context)
 
-
+@login_required
 def new_recipe(request):
     if request.method == 'POST':
         recipe = Recipe(
@@ -35,6 +36,7 @@ def new_recipe(request):
         return render(request, 'new_recipe.html')
     
 
+@login_required
 def toggle_like_recipe(request, pk):
     if request.method != 'POST':
         return redirect('recipe_detail', pk=pk)
@@ -46,7 +48,7 @@ def toggle_like_recipe(request, pk):
     new_like_status = request.user in recipe.liked_by.all()
     return JsonResponse({'success': True, 'new_like_count': recipe.get_like_count(), 'new_like_status': new_like_status})
 
-
+@login_required
 def profile(request):
     recipes = Recipe.objects.filter(created_by=request.user)
     context = {
@@ -54,9 +56,11 @@ def profile(request):
     }
     return render(request, 'profile.html', context)
 
-
+@login_required
 def edit_recipe(request, pk):
     recipe = Recipe.objects.get(pk=pk)
+    if recipe.created_by != request.user:
+        return redirect('recipe_detail', pk=pk)
     if request.method == 'POST':
         recipe.title = request.POST.get('title')
         recipe.description = request.POST.get('description')

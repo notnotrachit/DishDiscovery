@@ -3,11 +3,11 @@
 {% block main %}
     {% if messages %}
     <div>
-      {% for message in messages %}
+      {% comment %} {% for message in messages %}
       <div class="flex items-center px-4 py-3 text-sm font-bold text-primary bg-base-300 mt-10" role="alert">
         <p>{{ message }}</p>
       </div>
-      {% endfor %}
+      {% endfor %} {% endcomment %}
     </div>
     {% endif %}
     {% block content %}

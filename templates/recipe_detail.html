@@ -38,6 +38,8 @@
   <script>
     const like_btn = document.getElementById('like');
     like_btn.addEventListener('click', () => {
+      {% if request.user.is_authenticated %}
+      like_btn.innerHTML = "<div class='loading loading-spinner loading-sm'></div>"
       fetch(`/recipes/{{ recipe.id }}/like/`, {
         method: 'POST',
         headers: {
@@ -64,6 +66,9 @@
         }
         ;
       });
+      {% else %}
+      window.location.href = '/accounts/login/?next={{ request.path }}';
+      {% endif %}
     });
   </script>
 {% endblock %}
