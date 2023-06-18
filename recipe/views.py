@@ -45,3 +45,33 @@ def toggle_like_recipe(request, pk):
         recipe.liked_by.add(request.user)
     new_like_status = request.user in recipe.liked_by.all()
     return JsonResponse({'success': True, 'new_like_count': recipe.get_like_count(), 'new_like_status': new_like_status})
+
+
+def profile(request):
+    recipes = Recipe.objects.filter(created_by=request.user)
+    context = {
+        'recipes': recipes
+    }
+    return render(request, 'profile.html', context)
+
+
+def edit_recipe(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    original_image = recipe.image
+    if request.method == 'POST':
+        recipe.title = request.POST.get('title')
+        recipe.description = request.POST.get('description')
+        recipe.ingredients = request.POST.get('ingredients')
+        recipe.steps = request.POST.getlist('instructions')
+        if request.FILES.get('image'):
+            recipe.image = request.FILES.get('image')
+        else:
+            recipe.image = original_image
+        recipe.save()
+        return redirect('recipe_detail', pk=recipe.pk)
+    else:
+        context = {
+            'recipe': recipe
+        }
+        return render(request, 'edit_recipe.html', context)
+

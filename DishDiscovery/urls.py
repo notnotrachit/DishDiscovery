@@ -30,6 +30,8 @@ urlpatterns = [
     path('recipes/<int:pk>/', recipe_views.recipe_detail, name='recipe_detail'),
     path('recipes/new/', recipe_views.new_recipe, name='new_recipe'),
     path('recipes/<int:pk>/like/', recipe_views.toggle_like_recipe, name='toggle_like_recipe'),
+    path('recipes/<int:pk>/edit/', recipe_views.edit_recipe, name='edit_recipe'),
+    path('accounts/profile/', recipe_views.profile, name='profile'),
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block main %}
+
+<div>
+    <div class="text-5xl font-bold p-10">
+        Your recipes:
+    </div>
+    <div class="flex flex-wrap gap-10 justify-center">
+        {% for i in recipes %}
+            <div class="card w-72 bg-base-200 shadow-xl">
+            <figure class="px-5 pt-5">
+                <img src="{{i.image.url}}" alt="{{i.title}} image" class="rounded-xl max-h-72 border-2 border-primary" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">{{i.title}}</h2>
+                <p>{{ i.description | truncatechars:50}}</p>
+                <div class="card-actions">
+                    <a href="{% url 'edit_recipe' i.id %}">
+                        <button class="btn btn-primary">Edit</button>
+                    </a>
+                    <a href="{% url 'recipe_detail' i.id %}">
+                        <button class="btn btn-primary">Read</button>
+                    </a>
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}
