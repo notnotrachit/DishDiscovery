@@ -5,7 +5,7 @@
       {% if request.user.is_authenticated %}
       {% include 'navbar/profile_dropdown.html' %}
       {% else %}
-        <a href="{% url 'account_login' %}" class="btn btn-primary btn-small">Login</a>
+        <a href="{% url 'account_login' %}" class="btn btn-primary btn-small ">Login</a>
       {% endif %}
     </div>
   </div>
