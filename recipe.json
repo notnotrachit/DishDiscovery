@@ -1,0 +1,201 @@
+[
+  {
+    "model": "recipe.recipe",
+    "pk": 5,
+    "fields": {
+      "title": "Caesar Salad",
+      "description": "A tasty & healthy salad",
+      "ingredients": "1 head of romaine lettuce, chopped\r\n1 cup croutons\r\n1/2 cup grated Parmesan cheese\r\n2 tablespoons lemon juice\r\n2 tablespoons olive oil\r\n1 clove of garlic, minced\r\n1 teaspoon Dijon mustard\r\nSalt and pepper to taste",
+      "steps": [
+        "In a large salad bowl, combine the chopped romaine lettuce, croutons, and grated Parmesan cheese.",
+        "In a small bowl, whisk together the lemon juice, olive oil, minced garlic, Dijon mustard, salt, and pepper.",
+        "Pour the dressing over the salad and toss well to coat.",
+        "Serve the Caesar salad as a side dish or add grilled chicken for a complete meal."
+      ],
+      "image": "media/images/recipes/caesar_salad_zlhywz",
+      "created_at": "2023-06-18T20:32:13.400Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  },
+  {
+    "model": "recipe.recipe",
+    "pk": 6,
+    "fields": {
+      "title": "Chocolate Chip Cookies",
+      "description": "A chocolatey snack ",
+      "ingredients": "1 cup unsalted butter, softened\r\n1 cup granulated sugar\r\n1 cup brown sugar, packed\r\n2 large eggs\r\n1 teaspoon vanilla extract\r\n2 1/2 cups all-purpose flour\r\n1 teaspoon baking soda\r\n1/2 teaspoon salt\r\n2 cups chocolate chips",
+      "steps": [
+        "Preheat the oven to 375°F (190°C) and line a baking sheet with parchment paper.",
+        "In a large mixing bowl, cream together the softened butter, granulated sugar, and brown sugar until light and fluffy.",
+        "Beat in the eggs, one at a time, and then add the vanilla extract. Mix well.",
+        "In a separate bowl, whisk together the flour, baking soda, and salt. Gradually add the dry ingredients to the wet ingredients and mix until just combined.",
+        "Stir in the chocolate chips.",
+        "Drop rounded tablespoonfuls of dough onto the prepared baking sheet, spacing them apart.",
+        "Bake for 9-11 minutes or until golden brown around the edges.",
+        "Allow the cookies to cool on the baking sheet for a few minutes before transferring them to a wire rack to cool completely."
+      ],
+      "image": "media/images/recipes/chocochip_jbh0a6",
+      "created_at": "2023-06-18T20:56:09.171Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  },
+  {
+    "model": "recipe.recipe",
+    "pk": 7,
+    "fields": {
+      "title": "Margherita Pizza",
+      "description": "A very tasty & cheesy Margherita Pizza",
+      "ingredients": "Pizza dough (store-bought or homemade)\r\n1/2 cup tomato sauce\r\n2 cups shredded mozzarella cheese\r\nFresh basil leaves\r\nSliced tomatoes\r\nOlive oil\r\nSalt and pepper",
+      "steps": [
+        "Preheat your oven to the highest temperature setting (usually around 500°F or 260°C).",
+        "Roll out the pizza dough on a lightly floured surface to your desired thickness.",
+        "Transfer the rolled-out dough to a pizza stone or baking sheet lined with parchment paper.",
+        "Spread the tomato sauce evenly over the dough, leaving a small border around the edges.",
+        "Sprinkle the shredded mozzarella cheese over the sauce.",
+        "Arrange fresh basil leaves and sliced tomatoes on top of the cheese.",
+        "Drizzle a little olive oil over the pizza and season with salt and pepper.",
+        "Bake in the preheated oven for about 10-15 minutes, or until the crust is golden and the cheese is melted and bubbly.",
+        "Remove from the oven and let it cool for a few minutes before slicing.",
+        "Serve the Margherita pizza hot and enjoy the classic combination of flavors."
+      ],
+      "image": "media/images/recipes/pizza_ltl5jm",
+      "created_at": "2023-06-19T07:48:57.354Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  },
+  {
+    "model": "recipe.recipe",
+    "pk": 8,
+    "fields": {
+      "title": "Pav Bhaji",
+      "description": "This iconic Indian street food dish combines mashed vegetables cooked with aromatic spices, served alongside buttery toasted buns.",
+      "ingredients": "4-5 medium-sized potatoes, boiled and mashed\r\n1 cup mixed vegetables (such as cauliflower, carrots, peas, bell peppers), finely chopped\r\n1 large onion, finely chopped\r\n1 large tomato, finely chopped\r\n4-5 cloves of garlic, minced\r\n1-inch piece of ginger, grated\r\n2 tablespoons butter\r\n1 tablespoon pav bhaji masala (available at Indian grocery stores)\r\n1 teaspoon red chili powder\r\n1/2 teaspoon turmeric powder\r\nSalt to taste\r\nFreshly squeezed lemon juice\r\nChopped cilantro for garnish\r\nPav buns (Indian dinner rolls)\r\nButter for toasting the buns",
+      "steps": [
+        "Heat butter in a large pan or skillet over medium heat.",
+        "Add the chopped onions and sauté until they turn translucent.",
+        "Add the minced garlic and grated ginger. Cook for a minute until the raw smell disappears.",
+        "Add the chopped tomatoes and cook until they turn mushy.",
+        "Add the finely chopped mixed vegetables and cook until they are tender. You can add a little water and cover the pan to speed up the cooking process.",
+        "Once the vegetables are cooked, add the boiled and mashed potatoes to the pan. Mix well.",
+        "Add pav bhaji masala, red chili powder, turmeric powder, and salt. Mix everything together until well combined.",
+        "Using a potato masher or a large spoon, mash the mixture until the vegetables and potatoes are well blended.",
+        "Add a little water to adjust the consistency. The pav bhaji should have a slightly thick and mashed texture.",
+        "Cook the bhaji for another 5-7 minutes, allowing the flavors to meld together.",
+        "Squeeze fresh lemon juice over the bhaji and mix well.",
+        "In a separate pan, heat some butter and lightly toast the pav buns on both sides until they turn golden brown.",
+        "Serve the pav bhaji hot, garnished with chopped cilantro and a dollop of butter. Serve alongside the toasted pav buns."
+      ],
+      "image": "media/images/recipes/Instant-Pot-Mumbai-Pav-Bhaji-Recipe_jrqjth",
+      "created_at": "2023-06-19T07:58:32.863Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  },
+  {
+    "model": "recipe.recipe",
+    "pk": 10,
+    "fields": {
+      "title": "Sugar cookie baked oats ",
+      "description": "This Sugar cookie baked oats recipe is so simple and so so good.",
+      "ingredients": "1 ripe banana\r\n50 g oats\r\n120 ml milk\r\n1/2 tsp baking powder\r\n1/2 tbsp maple syrup\r\nOptional - splash of almond extract ",
+      "steps": [
+        "Blend the above ingredients together.",
+        "Add half of the mixture in to a ramekin with a tablespoon of jam and add the remaining mixture on top.\r\n",
+        "Add some sprinkles and bake for 15 minutes at 180 degrees.\r\n",
+        "Add some melted chocolate and sprinkles to finish.😍"
+      ],
+      "image": "media/images/recipes/848D4612-9F29-45D1-94B9-3C838F9F8B38_rpaktk",
+      "created_at": "2023-06-19T08:06:32.368Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  },
+  {
+    "model": "recipe.recipe",
+    "pk": 11,
+    "fields": {
+      "title": "Bread Pakoda",
+      "description": "Bread Pakoda is a delightful snack that combines the crunchiness of the fried outer layer with the flavourful and spiced potato filling. It is perfect for tea time or as an appetiser during gatherings. Enjoy the crispy and tasty goodness of Bread Pakoda with your favourite dipping sauce for a satisfying snacking experience.",
+      "ingredients": "8 slices of bread\r\n2 medium-sized potatoes, boiled and mashed\r\n1 small onion, finely chopped\r\n2 green chilies, finely chopped\r\n1/2 teaspoon ginger paste\r\n1/2 teaspoon cumin seeds\r\n1/2 teaspoon red chili powder\r\n1/4 teaspoon turmeric powder\r\nSalt to taste\r\nOil for frying\r\n1 cup besan (gram flour)\r\n2 tablespoons rice flour\r\n1/2 teaspoon red chili powder\r\nA pinch of baking soda\r\nSalt to taste\r\nWater as needed to make a thick batter",
+      "steps": [
+        "In a bowl, combine the mashed potatoes, finely chopped onion, green chilies, ginger paste, cumin seeds, red chili powder, turmeric powder, and salt. Mix well to form a smooth filling.",
+        "Take two slices of bread and trim the edges. Spread a generous amount of the potato filling on one slice and cover it with another slice to make a sandwich. Press gently to seal the edges.",
+        "Repeat the process with the remaining slices of bread and potato filling to make more sandwiches.",
+        "In a deep frying pan, heat oil for frying over medium heat.",
+        "In a separate bowl, prepare the batter by combining besan, rice flour, red chili powder, baking soda, and salt. Gradually add water while whisking until you achieve a thick batter consistency.",
+        "Dip each prepared bread sandwich into the batter, ensuring it is coated on all sides.",
+        "Carefully place the coated sandwich into the hot oil and fry until golden brown and crispy. Flip the sandwich occasionally to fry it evenly.",
+        "Once fried, remove the bread pakoda from the oil using a slotted spoon and place it on a paper towel to absorb excess oil.",
+        "Repeat the frying process with the remaining bread sandwiches.",
+        "Serve the hot and crispy bread pakodas with ketchup, mint chutney, or tamarind chutney."
+      ],
+      "image": "media/images/recipes/pakoda_zy9wne",
+      "created_at": "2023-06-19T08:07:47.986Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  },
+  {
+    "model": "recipe.recipe",
+    "pk": 12,
+    "fields": {
+      "title": "Samosa",
+      "description": "Samosas are a popular snack loved for their crispy exterior and flavorful filling. Enjoy these triangular pockets of deliciousness as an appetizer or as a tea-time treat. Experiment with different fillings and spice levels to suit your taste preferences. Serve them fresh and hot for the best experience!",
+      "ingredients": "2 cups all-purpose flour\r\n1/2 teaspoon salt\r\n4 tablespoons vegetable oil\r\nCold water, as needed\r\n3 medium-sized potatoes, boiled, peeled, and mashed\r\n1/2 cup green peas, boiled and lightly mashed\r\n1 small onion, finely chopped\r\n2 green chilies, finely chopped\r\n1 teaspoon grated ginger\r\n1 teaspoon cumin seeds\r\n1 teaspoon coriander seeds, crushed\r\n1/2 teaspoon turmeric powder\r\n1/2 teaspoon red chili powder\r\n1/2 teaspoon garam masala\r\n1 tablespoon lemon juice\r\nSalt to taste\r\nVegetable oil for frying",
+      "steps": [
+        "In a large mixing bowl, combine the all-purpose flour and salt. Add the vegetable oil and mix well until the mixture resembles bread crumbs.",
+        "Gradually add cold water, a little at a time, and knead to form a firm and smooth dough. Cover the dough with a damp cloth and let it rest for 15-20 minutes.",
+        "Meanwhile, prepare the filling. In a pan, heat some vegetable oil over medium heat. Add the cumin seeds and crushed coriander seeds. Sauté for a minute until fragrant.",
+        "Add the finely chopped onion, green chilies, and grated ginger to the pan. Sauté until the onion turns translucent.",
+        "Add the mashed potatoes and mashed green peas to the pan. Mix well.",
+        "Stir in the turmeric powder, red chili powder, garam masala, and salt. Cook for a few minutes, allowing the flavors to blend together.",
+        "Remove the pan from heat and add lemon juice. Mix well and let the filling cool down.",
+        "Divide the dough into small balls and roll each ball into a thin circle.",
+        "Cut each circle in half to form semi-circles.",
+        "Take one semi-circle, moisten the straight edge with water, and form a cone shape by bringing the moistened edge together. Seal the edge well.",
+        "Fill the cone with a spoonful of the prepared potato and pea filling.",
+        "Moisten the open edges of the cone with water and press them together to seal the samosa.",
+        "Repeat the process with the remaining dough and filling to make more samosas.",
+        "In a deep frying pan, heat vegetable oil over medium heat. Once the oil is hot, carefully slide a few samosas into the oil and fry them until they turn golden brown and crispy.",
+        "Remove the fried samosas from the oil and place them on a paper towel to absorb excess oil.",
+        "Serve the hot and crispy samosas with tamarind chutney, mint chutney, or ketchup."
+      ],
+      "image": "media/images/recipes/samosa_hieht4",
+      "created_at": "2023-06-19T08:13:23.551Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  },
+  {
+    "model": "recipe.recipe",
+    "pk": 13,
+    "fields": {
+      "title": "Rasgulla",
+      "description": "Rasgulla is a delightful sweet treat enjoyed on various occasions and festivals. The soft and spongy cottage cheese balls soaked in a sweet sugar syrup are sure to satisfy your sweet cravings. Serve them chilled for the best taste and enjoy this traditional Indian dessert!",
+      "ingredients": "1 liter full-fat milk\r\n1 tablespoon lemon juice or vinegar\r\n8 cups water\r\n2 cup sugar\r\n2-3 cardamom pods (optional)\r\nA few strands of saffron (optional)\r\n1 teaspoon rose water (optional)",
+      "steps": [
+        "In a large pot, bring the milk to a boil over medium heat.",
+        "Once the milk comes to a boil, reduce the heat and add lemon juice or vinegar. Stir gently until the milk curdles and separates into curds (chenna) and whey.",
+        "Line a colander or a large sieve with a muslin cloth or cheesecloth. Pour the curdled milk through the cloth to strain the whey.",
+        "Rinse the chenna under cold running water to remove any traces of lemon juice or vinegar.",
+        "Gather the cloth and squeeze gently to remove excess water from the chenna. Hang the cloth with the chenna for about 30 minutes to drain any remaining water.",
+        "After 30 minutes, remove the chenna from the cloth and transfer it to a clean plate or surface.",
+        "Knead the chenna with the heel of your hand until it becomes smooth and soft. This process helps in making smooth rasgulla balls.",
+        "Divide the chenna into small equal-sized portions and shape them into round balls by rolling them between your palms. Ensure there are no cracks in the balls.",
+        "In a large pot, combine water and sugar to make the sugar syrup. Add cardamom pods and saffron strands for additional flavor, if desired. Bring the syrup to a boil over medium heat.",
+        "Carefully drop the chenna balls into the boiling sugar syrup. Cover the pot with a lid and let them cook for about 15 minutes.",
+        "After 15 minutes, the rasgullas will become light and spongy, and they will double in size.",
+        "Remove the pot from the heat and let the rasgullas cool down to room temperature in the sugar syrup.",
+        "Once cooled, refrigerate the rasgullas in the sugar syrup for at least 2-3 hours to allow them to soak up the syrup and enhance the flavor.",
+        "Serve the chilled rasgullas with a drizzle of the sugar syrup. You can garnish them with a few saffron strands and a touch of rose water for added aroma and presentation."
+      ],
+      "image": "media/images/recipes/rasgulla_ahowky",
+      "created_at": "2023-06-19T08:25:10.006Z",
+      "created_by": 1,
+      "liked_by": [1]
+    }
+  }
+]
