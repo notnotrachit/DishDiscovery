@@ -17,18 +17,63 @@
   <body class="font-['Poppins']">
 
 
-<div class="hero min-h-screen" style="background-image: url(https://jodwyarssgkswjrsudwe.supabase.co/storage/v1/object/public/recipe/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface.webp?t=2023-06-18T21%3A44%3A45.958Z);">
-  <div class="hero-overlay bg-opacity-60"></div>
-  <div class="hero-content text-center text-neutral-content">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-7xl font-bold">DishDiscovery</h1>
-      <p class="mb-5 text-3xl">Feeling hungry? Need ideas for what to cook?</p>
-      <a href="{% url 'all_recipes' %}">
-      <button class="btn btn-primary">Discover Recipes</button>
-      </a>
+{% comment %} <div class="hero min-h-screen" style="background-image: url(https://jodwyarssgkswjrsudwe.supabase.co/storage/v1/object/public/recipe/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface.webp?t=2023-06-18T21%3A44%3A45.958Z);"> {% endcomment %}
+  <div class="hero min-h-screen bg-primary/50">
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl md:text-7xl font-bold text-primary-content">Dish Discovery</h1>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <div class="flex justify-center">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_tll0j4bb.json"  background="transparent"  speed="1"  class="w-72 h-72 md:w-96 md:h-96"  loop  autoplay></lottie-player>
+        </div>
+        <p class="mb-5 text-3xl text-primary-content">Feeling hungry? Need ideas for what to cook?</p>
+        <a href="{% url 'all_recipes' %}">
+        <button class="btn btn-primary">Discover Recipes</button>
+        </a>
+        <div class="flex justify-center">
+        <lottie-player src="https://lottie.host/24b76a14-6022-496d-a1bc-4129c222b352/YhrplvJvQF.json"  background="transparent"  speed="1.5"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
+  <section class="hero min-h-screen bg-primary/50">
+
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-body flex w-5/6 justify-center gap-4 text-primary-content pb-5">
+      <div>
+      <div class="text-5xl py-5 font-bold">Dish Discovery Features:</div>
+      <div class="flex flex-wrap justfiy-center gap-4">
+      <div class="p-4 rounded-xl shadow w-72 flex flex-wrap justify-center bg-primary">
+        <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_ia3o7esn.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+      <h2 class="text-2xl font-bold mb-2">Explore Recipes</h2>
+      <p>Explore our vast collection of recipes from various cuisines and categories.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-primary shadow w-72 flex flex-wrap justify-center">
+      <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_epvidscs.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+      <h2 class="text-2xl font-bold mb-2">Find Recipes</h2>
+      <p>Use our search function to find recipes based on recipe or ingredients that you already have.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-primary shadow w-72 flex flex-wrap justify-center">
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_GxMZME.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+        <h2 class="text-2xl font-bold mb-2">Submit Your Recipes</h2>
+        <p>Share your favorite recipes with the DishDiscovery community. Contribute to our recipe database and inspire others with your culinary creations.</p>
+      </div>
+      <div class="p-4 rounded-xl bg-primary shadow w-72 flex flex-wrap justify-center">
+        <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_kpak4iic.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+        <h2 class="text-2xl font-bold mb-2">Like Recipes</h2>
+        <p>Liked a recipe? Like it and motivate the author</p>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+    (function () {
+        var scroll = new LocomotiveScroll();
+    })();
+</script>
   </body>
 </html>
